@@ -24,7 +24,7 @@ function loginsubmit() {
         var errorCode = error.code;
         var errorMessage = error.message;
         // ...
-        console.log(errorMessage + errorCode);
+        console.log('Error' + errorMessage);
       });
 
 }
