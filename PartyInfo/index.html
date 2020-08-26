@@ -25,7 +25,11 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
 
-
+    <style>
+        h4{
+            margin-bottom: 30px;
+        }
+    </style>
 
 
 </head>
@@ -46,9 +50,37 @@
     </nav>
     <div class="sec1">
         <h1>Welcome to Party Planer</h1>
+    </div>
+    <div class="sec2">
         <div class="alert alert-light" role="alert" id="partylist" style="display: none;">
             <div class="alert alert-primary" role="alert">
-                A simple primary alert—check it out!
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-2 col-xs-2">
+                        <div id="title">
+                            <h4>Party Title</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-2 col-xs-2">
+                        <div id="address">
+                            <h4>Address</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                        <div id="city">
+                            <h4>City</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+                        <div id="state">
+                            <h4>State</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+                        <div id="zip">
+                            <h4>Zip</h4>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -113,9 +145,7 @@
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-auth.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script>
 
     <script>
         // Your web app's Firebase configuration
@@ -130,8 +160,10 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
 
     </script>
+    <script src="js/get.js"></script>
     <script src="js/index.js"></script>
 </body>
 
