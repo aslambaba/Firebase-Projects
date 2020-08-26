@@ -14,12 +14,13 @@ firebase.auth().onAuthStateChanged(function (user) {
         document.getElementById('partylist').style.display = 'block';
     }
 });
-function loginsubmit() {
+function submit() {
 
-    email = document.getElementById('loginemail').value;
-    password = document.getElementById('loginpass').value;
+    var email = document.getElementById('loginemail').value;
+    var password = document.getElementById('loginpass').value;
     alert(email+password);
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+
+    firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
